@@ -55,10 +55,10 @@ struct DetailsView: View {
                         } label: {
                             ReciveNotificationButton(text: "No", color: .red)
                         }
+                    }                .alert(alertMessage, isPresented: $showAlert){
+                        Button("ok", role: .cancel){}
+                        
                     }
-                }
-                .alert(alertMessage, isPresented: $showAlert){
-                    Button("ok", role: .cancel){}
                 }
                 Spacer()
                 HStack(spacing: 50) {
